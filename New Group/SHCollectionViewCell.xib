@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SHCollectionViewCell" id="nqK-GR-E0a" customClass="SHCollectionViewCell" customModule="Resis" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="189" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bTs-60-5Qf">
+                <rect key="frame" x="0.0" y="0.0" width="189" height="220"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="US7-79-Obi">
+                        <rect key="frame" x="0.0" y="7" width="189" height="16"/>
+                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Wp-Lr-whN">
+                        <rect key="frame" x="0.0" y="31" width="189" height="189"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6Wp-Lr-whN" firstAttribute="centerX" secondItem="bTs-60-5Qf" secondAttribute="centerX" id="5Rm-AW-R7u"/>
+                    <constraint firstItem="US7-79-Obi" firstAttribute="leading" secondItem="bTs-60-5Qf" secondAttribute="leading" id="Ejb-1n-Ln9"/>
+                    <constraint firstAttribute="trailing" secondItem="6Wp-Lr-whN" secondAttribute="trailing" id="Gkk-k2-cry"/>
+                    <constraint firstItem="6Wp-Lr-whN" firstAttribute="top" secondItem="US7-79-Obi" secondAttribute="bottom" constant="8" id="KEe-b2-H94"/>
+                    <constraint firstItem="6Wp-Lr-whN" firstAttribute="width" secondItem="bTs-60-5Qf" secondAttribute="width" id="LEw-kI-a4v"/>
+                    <constraint firstItem="6Wp-Lr-whN" firstAttribute="width" secondItem="6Wp-Lr-whN" secondAttribute="height" multiplier="1:1" id="NoJ-3j-qBa"/>
+                    <constraint firstItem="6Wp-Lr-whN" firstAttribute="leading" secondItem="bTs-60-5Qf" secondAttribute="leading" id="Qol-yN-NFZ"/>
+                    <constraint firstAttribute="bottom" secondItem="6Wp-Lr-whN" secondAttribute="bottom" id="df9-0V-nRh"/>
+                    <constraint firstItem="US7-79-Obi" firstAttribute="top" secondItem="bTs-60-5Qf" secondAttribute="top" constant="7" id="qRt-xV-YsW"/>
+                    <constraint firstAttribute="trailing" secondItem="US7-79-Obi" secondAttribute="trailing" id="zuc-vT-4Kg"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="189" height="220"/>
+            <connections>
+                <outlet property="filterNameLabel" destination="US7-79-Obi" id="bf6-wg-ZQC"/>
+                <outlet property="imageView" destination="6Wp-Lr-whN" id="GWT-Vb-YjM"/>
+            </connections>
+            <point key="canvasLocation" x="151.44927536231884" y="-229.6875"/>
+        </collectionViewCell>
+    </objects>
+</document>

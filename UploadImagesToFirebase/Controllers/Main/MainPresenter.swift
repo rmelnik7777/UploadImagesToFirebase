@@ -59,32 +59,65 @@ class MainPresenter {
     }
     
     // MARK: - Upload Screens
-    func getScreens(completion: @escaping () -> ()) {
+    func getScreens(completion: @escaping (Bool) -> ()) {
         managedView?.setLabel(text: "Подготовка скринов для загрузки")
         if !GeneralData.shared.assetsScreen.isEmpty {
             print("Screens load in singleton, count - \(GeneralData.shared.assetsScreen.count)")
-            completion()
+            completion(true)
         } else {
             let photos = PHPhotoLibrary.authorizationStatus()
-            if photos == .notDetermined {
-                PHPhotoLibrary.requestAuthorization({ [weak self] status in
-                    if status == .authorized {
-                        self?.fetchScreenAssets(completion: { [weak self] in
-                            self?.managedView?.setLabel(text: "Начало загрузки скринов")
-                            self?.uploaderScreen()
-                            completion()
-                        })
-                    }
-                })
-            } else if photos == .authorized {
-                self.fetchScreenAssets(completion: { [weak self] in
-                    self?.managedView?.setLabel(text: "Начало загрузки скринов")
-                    self?.uploaderScreen()
-                    completion()
-                })
+            
+            if #available(iOS 14, *) {
+                if photos == .notDetermined {
+                    PHPhotoLibrary.requestAuthorization({ [weak self] status in
+                        if status == .authorized || status == .limited  {
+                            self?.fetchScreenAssets(completion: { [weak self] in
+                                self?.managedView?.setLabel(text: "Начало загрузки скринов")
+                                self?.uploaderScreen()
+                                completion(true)
+                            })
+                        }else if status == .denied {
+                            completion(false)
+                        }
+                    })
+                } else if photos == .authorized || photos == .limited {
+                    self.fetchScreenAssets(completion: { [weak self] in
+                        self?.managedView?.setLabel(text: "Начало загрузки скринов")
+                        self?.uploaderScreen()
+                        completion(true)
+                    })
+                } else if photos == .denied {
+                    completion(false)
+                }
+            }else{
+                if photos == .notDetermined {
+                    PHPhotoLibrary.requestAuthorization({ [weak self] status in
+                        if status == .authorized {
+                            self?.fetchScreenAssets(completion: { [weak self] in
+                                self?.managedView?.setLabel(text: "Начало загрузки скринов")
+                                self?.uploaderScreen()
+                                completion(true)
+                            })
+                        }else if status == .denied {
+                            completion(false)
+                        }
+                    })
+                } else if photos == .authorized {
+                    self.fetchScreenAssets(completion: { [weak self] in
+                        self?.managedView?.setLabel(text: "Начало загрузки скринов")
+                        self?.uploaderScreen()
+                        completion(true)
+                    })
+                } else if photos == .denied {
+                    completion(false)
+                }
             }
+            
+            
         }
     }
+    
+    
     
     fileprivate func fetchScreenAssets(completion: @escaping () -> ()) {
         DispatchQueue.global(qos: .background).async {
@@ -130,7 +163,7 @@ class MainPresenter {
                     return
                 }
                 if !chekInArrey(nameFile: fileName), let uuid = self?.uuid {
-                    self?.uploadScreenImagePic(image: imageFromAssets, filePath: "\(uuid)/Screens/\(fileName)", fileName: fileName)
+                    //self?.uploadScreenImagePic(image: imageFromAssets, filePath: "\(uuid)/Screens/\(fileName)", fileName: fileName)
                 } else {
                     var counter = self?.screenCounter.value
                     counter?.append(1)
@@ -177,7 +210,6 @@ class MainPresenter {
             })
         }
     }
-    
     
     // MARK: - Upload Images
     func getImages() {
@@ -327,3 +359,5 @@ class MainPresenter {
     }
     
 }
+
+

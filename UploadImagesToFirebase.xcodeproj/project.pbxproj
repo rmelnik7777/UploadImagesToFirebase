@@ -17,6 +17,10 @@
 		558ADA6924F649A000EA4E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 558ADA6824F649A000EA4E51 /* Main.storyboard */; };
 		558ADA6E24F664D800EA4E51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 558ADA6D24F664D800EA4E51 /* GoogleService-Info.plist */; };
 		558ADA7024F6CBBB00EA4E51 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558ADA6F24F6CBBB00EA4E51 /* UserDefaultsHelper.swift */; };
+		A848699725B5BCFB00B72165 /* SHViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848699325B5BCFB00B72165 /* SHViewController.xib */; };
+		A848699825B5BCFB00B72165 /* SHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848699425B5BCFB00B72165 /* SHViewController.swift */; };
+		A848699925B5BCFB00B72165 /* SHCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A848699525B5BCFB00B72165 /* SHCollectionViewCell.swift */; };
+		A848699D25B5BE6F00B72165 /* SHCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A848699C25B5BE6F00B72165 /* SHCollectionViewCell.xib */; };
 		B99E45F73A84FF542B00976F /* Pods_UploadImagesToFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A83B06A7D4F095BF8188F910 /* Pods_UploadImagesToFirebase.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +40,10 @@
 		8AF9452CEDB4BC3CD13A098E /* Pods-UploadImagesToFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadImagesToFirebase.release.xcconfig"; path = "Target Support Files/Pods-UploadImagesToFirebase/Pods-UploadImagesToFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		8D0180CACDC1370D5A1FC839 /* Pods-UploadImagesToFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UploadImagesToFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UploadImagesToFirebase/Pods-UploadImagesToFirebase.debug.xcconfig"; sourceTree = "<group>"; };
 		A83B06A7D4F095BF8188F910 /* Pods_UploadImagesToFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UploadImagesToFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A848699325B5BCFB00B72165 /* SHViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SHViewController.xib; path = Lib/SHViewController.xib; sourceTree = SOURCE_ROOT; };
+		A848699425B5BCFB00B72165 /* SHViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SHViewController.swift; path = Lib/SHViewController.swift; sourceTree = SOURCE_ROOT; };
+		A848699525B5BCFB00B72165 /* SHCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SHCollectionViewCell.swift; path = Lib/SHCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		A848699C25B5BE6F00B72165 /* SHCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SHCollectionViewCell.xib; path = "New Group/SHCollectionViewCell.xib"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 		5522774D24F54A3C00A3B9D1 = {
 			isa = PBXGroup;
 			children = (
+				A8001AE725AC746400171214 /* New Group */,
 				5522775824F54A3C00A3B9D1 /* UploadImagesToFirebase */,
 				5522775724F54A3C00A3B9D1 /* Products */,
 				BC8B1C7C05A86B833E5CD7F3 /* Pods */,
@@ -134,6 +143,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A8001AE725AC746400171214 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				A848699525B5BCFB00B72165 /* SHCollectionViewCell.swift */,
+				A848699425B5BCFB00B72165 /* SHViewController.swift */,
+				A848699C25B5BE6F00B72165 /* SHCollectionViewCell.xib */,
+				A848699325B5BCFB00B72165 /* SHViewController.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		BC8B1C7C05A86B833E5CD7F3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +192,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = "Роман Мельник";
 				TargetAttributes = {
 					5522775524F54A3C00A3B9D1 = {
@@ -205,8 +225,10 @@
 			files = (
 				558ADA6924F649A000EA4E51 /* Main.storyboard in Resources */,
 				558ADA6E24F664D800EA4E51 /* GoogleService-Info.plist in Resources */,
+				A848699D25B5BE6F00B72165 /* SHCollectionViewCell.xib in Resources */,
 				5522776624F54A3E00A3B9D1 /* LaunchScreen.storyboard in Resources */,
 				5522776324F54A3E00A3B9D1 /* Assets.xcassets in Resources */,
+				A848699725B5BCFB00B72165 /* SHViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A848699825B5BCFB00B72165 /* SHViewController.swift in Sources */,
 				554D901624F793EA00628041 /* LoadImage.swift in Sources */,
 				558ADA7024F6CBBB00EA4E51 /* UserDefaultsHelper.swift in Sources */,
 				5522777524F5542300A3B9D1 /* GeneralData.swift in Sources */,
 				5522775A24F54A3C00A3B9D1 /* AppDelegate.swift in Sources */,
+				A848699925B5BCFB00B72165 /* SHCollectionViewCell.swift in Sources */,
 				5522777024F54E3700A3B9D1 /* MainPresenter.swift in Sources */,
 				5522776E24F54D5F00A3B9D1 /* MainVC.swift in Sources */,
 			);
@@ -308,6 +332,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -332,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -368,6 +393,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -386,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -403,10 +429,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = G879CH66J5;
 				INFOPLIST_FILE = UploadImagesToFirebase/Application/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,10 +452,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = G879CH66J5;
 				INFOPLIST_FILE = UploadImagesToFirebase/Application/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

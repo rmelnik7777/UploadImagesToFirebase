@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,36 +16,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-uZ-fyL">
+                                <rect key="frame" x="52" y="129" width="310" height="634.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Zu-Aa-HBD">
+                                        <rect key="frame" x="35" y="294.5" width="240" height="240"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1Zu-Aa-HBD" secondAttribute="height" multiplier="1:1" id="UHt-HG-7MR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpo-hU-iGC">
+                                        <rect key="frame" x="35" y="559.5" width="240" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ef5-AR-Klu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Выбрать фото">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sharakuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkE-Wi-M92"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PB-pB-9Qh">
+                                        <rect key="frame" x="35" y="294.5" width="240" height="240"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="sharakuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j31-Bf-U9F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29541703345070425" green="0.73899647887323938" blue="1" alpha="0.24854203345070422" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1PB-pB-9Qh" firstAttribute="trailing" secondItem="1Zu-Aa-HBD" secondAttribute="trailing" id="TaX-Hq-0si"/>
+                                    <constraint firstAttribute="bottom" secondItem="cpo-hU-iGC" secondAttribute="bottom" constant="35" id="Zgd-Ng-1kh"/>
+                                    <constraint firstAttribute="leading" secondItem="1Zu-Aa-HBD" secondAttribute="leading" constant="-35" id="dmL-gN-fwx"/>
+                                    <constraint firstItem="1PB-pB-9Qh" firstAttribute="leading" secondItem="1Zu-Aa-HBD" secondAttribute="leading" id="ffb-Ew-fI6"/>
+                                    <constraint firstItem="1PB-pB-9Qh" firstAttribute="bottom" secondItem="1Zu-Aa-HBD" secondAttribute="bottom" id="lUO-Lb-d2O"/>
+                                    <constraint firstItem="cpo-hU-iGC" firstAttribute="width" secondItem="1Zu-Aa-HBD" secondAttribute="width" id="tCS-od-4ba"/>
+                                    <constraint firstItem="cpo-hU-iGC" firstAttribute="top" secondItem="1Zu-Aa-HBD" secondAttribute="bottom" constant="25" id="wTt-Yz-HA9"/>
+                                    <constraint firstItem="cpo-hU-iGC" firstAttribute="centerX" secondItem="1Zu-Aa-HBD" secondAttribute="centerX" id="xW3-Ej-8j9"/>
+                                    <constraint firstItem="1PB-pB-9Qh" firstAttribute="top" secondItem="1Zu-Aa-HBD" secondAttribute="top" id="yWI-qL-xxi"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Zu-Aa-HBD" secondAttribute="trailing" constant="35" id="zXb-yI-ZJ1"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDC-dU-e8J">
-                                <rect key="frame" x="186.5" y="69" width="41" height="20.5"/>
+                                <rect key="frame" x="186.5" y="164" width="41" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9bn-a4-Dgs">
-                                <rect key="frame" x="70" y="139.5" width="274" height="2"/>
+                                <rect key="frame" x="70" y="234.5" width="274" height="4"/>
                             </progressView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="9bn-a4-Dgs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="1z0-Cf-YjT"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cDC-dU-e8J" secondAttribute="trailing" constant="10" id="9lp-Cb-BEK"/>
-                            <constraint firstItem="cDC-dU-e8J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="B0Q-Og-wkn"/>
                             <constraint firstItem="cDC-dU-e8J" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Gm3-Ck-7BG"/>
                             <constraint firstItem="9bn-a4-Dgs" firstAttribute="top" secondItem="cDC-dU-e8J" secondAttribute="bottom" constant="50" id="Jzi-If-Nzh"/>
+                            <constraint firstItem="SJq-uZ-fyL" firstAttribute="top" secondItem="cDC-dU-e8J" secondAttribute="top" constant="-35" id="M8A-Pw-kIQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9bn-a4-Dgs" secondAttribute="trailing" constant="50" id="OLM-8O-mQx"/>
                             <constraint firstItem="cDC-dU-e8J" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gfQ-vZ-EG6"/>
+                            <constraint firstItem="1Zu-Aa-HBD" firstAttribute="top" secondItem="9bn-a4-Dgs" secondAttribute="bottom" constant="185" id="qe6-Eh-olz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SJq-uZ-fyL" secondAttribute="trailing" constant="52" id="tb1-xN-Rjn"/>
+                            <constraint firstItem="SJq-uZ-fyL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="xDc-bv-gpw"/>
+                            <constraint firstItem="1Zu-Aa-HBD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="xro-I8-S9T"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bgView" destination="SJq-uZ-fyL" id="kdb-No-Laq"/>
+                        <outlet property="imageView" destination="1Zu-Aa-HBD" id="NIm-R4-AkI"/>
                         <outlet property="itemLabel" destination="cDC-dU-e8J" id="vrO-Vw-4Zt"/>
                         <outlet property="progressBar" destination="9bn-a4-Dgs" id="YfA-zC-gJh"/>
+                        <outlet property="showSharokuButton" destination="cpo-hU-iGC" id="D9d-3y-7Xy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="127"/>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
     </scenes>
 </document>
